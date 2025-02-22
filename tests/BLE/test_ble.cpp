@@ -506,6 +506,9 @@ const char* expected_mac_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":27.25,\"tempf_max\":81.05,\"time_max\":3188218,\"tempc_min\":18.375,\"tempf_min\":65.075,\"time_min\":6778822,\"mac\":\"8E:BB:00:00:07:10\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":29.6875,\"tempf_max\":85.4375,\"time_max\":106359,\"tempc_min\":24.125,\"tempf_min\":75.425,\"time_min\":54044,\"mac\":\"63:06:00:00:0D:FE\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"ThermoBeacon\",\"model_id\":\"WS02/WS08\",\"type\":\"THB\",\"cidc\":false,\"tempc_max\":27,\"tempf_max\":80.6,\"time_max\":175,\"tempc_min\":24.1875,\"tempf_min\":75.5375,\"time_min\":217757,\"mac\":\"DC:23:00:00:0A:AE\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":24.6,\"tempf\":76.28,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":6.5,\"tempf\":43.7,\"hum\":37,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
+    "{\"brand\":\"VCHON\",\"model\":\"Thermo-Hygrometer\",\"model_id\":\"VCH6003\",\"type\":\"THB\",\"cidc\":false,\"tempc\":-13,\"tempf\":8.6,\"hum\":20,\"mac\":\"AA:BB:CC:DD:EE:FF\"}",
 };
 
 const char* expected_mac_mfgsvcdata[] = {
@@ -1502,6 +1505,9 @@ const char* test_mac_mfgdata[][3] = {
     {"WS02/WS08", "8E:BB:00:00:07:10", "1500000010070000bb8eb401faa530002601c66f6700"},
     {"WS02/WS08", "63:06:00:00:0D:FE", "10000000fe0d00000663db01779f010082011cd30000"},
     {"WS02/WS08", "DC:23:00:00:0A:AE", "11000000ae0a000023dcb001af00000083019d520300"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "010900f614aabbccddeeff"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "0109004125aabbccddeeff"},
+    {"VCH6003", "AA:BB:CC:DD:EE:FF", "0109ff7e14aabbccddeeff"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
@@ -1530,6 +1536,9 @@ TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
     TheengsDecoder::BLE_ID_NUM::THERMOBEACON,
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
+    TheengsDecoder::BLE_ID_NUM::VCH6003,
 };
 
 // MAC test input [test name] [mac] [manufacturer data] [service data]
