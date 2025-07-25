@@ -46,7 +46,8 @@ public:
 
   enum BLE_ID_NUM {
     UNKNOWN_MODEL = -1,
-    HHCCJCY01HHCC = 0,
+    BEESMART_HIVENET = 0,
+    HHCCJCY01HHCC,
     LYWSD02,
     LYWSDCGQ,
     CGP1W,

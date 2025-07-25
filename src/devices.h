@@ -19,6 +19,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "devices/BEESMART_HIVENET_json.h"
 #include "devices/CGD1_json.h"
 #include "devices/CGDK2_json.h"
 #include "devices/CGG1_json.h"
@@ -140,6 +141,7 @@
 
 
 const char* _devices[][2] = {
+    {_BEESMART_HIVENET_json, _BEESMART_HIVENET_json_props},
     {_HHCCJCY01HHCC_json, _HHCCJCY01HHCC_json_props},
     {_LYWSD02_json, _LYWSD02_json_props},
     {_LYWSDCGQ_json, _LYWSDCGQ_json_props},
